@@ -1,4 +1,4 @@
-name: CI depenses assurance maladie 201807
+name: CI assurance maladie 201807
 
 on:
   push:
