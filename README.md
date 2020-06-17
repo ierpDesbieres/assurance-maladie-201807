@@ -1,6 +1,6 @@
 # Dépenses de l'Assurance Maladie - Juillet 2018
 
-![CI depenses assurance maladie 201807](https://github.com/ierpDesbieres/assurance-maladie-201807/workflows/CI%20depenses%20assurance%20maladie%20201807/badge.svg)
+![CI assurance maladie 201807](https://github.com/ierpDesbieres/assurance-maladie-201807/workflows/CI%20assurance%20maladie%20201807/badge.svg)
 
 ## Getting started
 ```zsh
