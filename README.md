@@ -1,6 +1,6 @@
 # Dépenses de l'Assurance Maladie - Juillet 2018
 
-![CI depenses assurance maladie 201807](https://github.com/ierpDesbieres/depenses-assurance-maladie-201807/workflows/CI%20depenses%20assurance%20maladie%20201807/badge.svg)
+![CI depenses assurance maladie 201807](https://github.com/ierpDesbieres/assurance-maladie-201807/workflows/CI%20depenses%20assurance%20maladie%20201807/badge.svg)
 
 ## Getting started
 ```zsh
@@ -51,7 +51,7 @@ Here we compute results (average and repartition) directly in the postgresql ins
 - Add some sort of messaging on sanity check failling
 
 ## What could have i done differently?:
-- Use PythonOperator with raising conditions, in place of the ShortCircuitOperator, in the sanity checks to fail the task, advantage of the ShortCircuitOperator is that it will skip the branch, computations on another branch will still happen + wanted to have fun.
+- Use PythonOperator with raising conditions, in place of the ShortCircuitOperator, in the sanity checks to fail the task, advantage of the ShortCircuitOperator is that it will skip the branch, computations on another branch will still happen (+ wanted to have fun).
 - Using Xcom could have been great, but given the significative size of the dataframes I don't find it to be a very efficient way to do it.
 - Could provide option to drop or not pre-existing tables (drop by default).
 - Could provide a way to select which columns we want to keep from the source csv
