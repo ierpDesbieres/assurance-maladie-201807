@@ -33,4 +33,4 @@ jobs:
           airflow initdb
           pytest -vv
         env:
-          AIRFLOW_HOME: "/home/runner/work/depenses-assurance-maladie-201807/depenses-assurance-maladie-201807"
+          AIRFLOW_HOME: "/home/runner/work/assurance-maladie-201807/assurance-maladie-201807"
