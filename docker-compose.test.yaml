@@ -1,0 +1,35 @@
+version: '3.7'
+services:
+    postgres:
+        image: postgres:9.6
+        environment:
+            - POSTGRES_USER=airflow
+            - POSTGRES_PASSWORD=airflow
+            - POSTGRES_DB=airflow
+        logging:
+            options:
+                max-size: 10m
+                max-file: "3"
+        volumes:
+            - ./data:/data
+            - ./requests/init.sql:/docker-entrypoint-initdb.d/init.sql
+        ports:
+            - "5432:5432"
+    tests:
+        image: python:3.8
+        depends_on: 
+            - postgres
+        environment: 
+            - DATA_DIR=/data
+            - TESTS_DIR=/src
+            - AIRFLOW_HOME=/src
+        volumes:
+            - ./data:/data
+            - ./dags:/src/dags/
+            - ./tests:/src/tests/
+            - ./requirements.txt:/requirements.txt
+            - ./Makefile:/Makefile
+        ports:
+            - "8080:8080"
+        command:
+            make install test
