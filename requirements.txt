@@ -1,4 +1,4 @@
-apache-airflow==1.10.11
+apache-airflow==2.5.2
 mysqlclient==1.4.6
 pandas==1.0.0
 psycopg2-binary==2.8.5
